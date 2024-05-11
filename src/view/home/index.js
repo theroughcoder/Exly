@@ -4,7 +4,7 @@ import "./style.css"
 import React, { useEffect, useState } from "react"
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { userData } from "../../data/users"
-import { Button } from "@mui/material";
+import { Button, Pagination } from "@mui/material";
 import AddBookingForm from "../../component/addBookingForm";
 import CustomerTable from "../../component/customerTable"
 
@@ -42,7 +42,7 @@ const Home = (props) => {
     <div className="home">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "600" }}>Manage Transactions</div>
-        <Button onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6b1091", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span><ChevronRightIcon style={{ width: "25px" }} /> </Button>
+        <Button onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6e13c3", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span><ChevronRightIcon style={{ width: "25px" }} /> </Button>
 
       </div>
       <div className="transaction-menu">
@@ -61,7 +61,7 @@ const Home = (props) => {
         </div>
       </div>
 
-      <div style={{ overflow: "auto" }} >
+      <div  >
         <CustomerTable user={filterUser} />
 
         {openAddForm && <AddBookingForm setOpenAddForm={setOpenAddForm} addNewCustomer={addNewCustomer} />}
