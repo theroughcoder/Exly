@@ -5,7 +5,7 @@ import { ChevronDoubleRightIcon } from "@heroicons/react/20/solid";
 
 const Sidebar = (props) => {
     return (
-        <div className="sidebar">
+        <div className="sidebar" style={{left : props.openSidebar ? "0" : ""}}>
             <div className="sidebar-up">
 
                 <div className="sidebar-items">

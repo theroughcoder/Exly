@@ -9,8 +9,12 @@
     position: fixed;
     top: 52px;
     left: 0;
+    background-color: white;
+    z-index: 1;
+    transition: all 1s;
     
 }
+
 .sidebar-up{
     padding: 30px 10px;
     gap: 15px;
@@ -38,3 +42,11 @@
 .down-arrow{
     color: grey;
 }
+
+@media only screen and (max-width: 600px){
+  
+  
+    .sidebar { 
+        left : -250px
+    }
+  }

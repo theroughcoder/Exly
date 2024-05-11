@@ -42,7 +42,7 @@ const Home = (props) => {
     <div className="home">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "600" }}>Manage Transactions</div>
-        <Button onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6e13c3", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span><ChevronRightIcon style={{ width: "25px" }} /> </Button>
+        <Button className="customer-add-btn" onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6e13c3", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span> </Button>
 
       </div>
       <div className="transaction-menu">

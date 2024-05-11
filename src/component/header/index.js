@@ -7,7 +7,7 @@ const Header = (props) => {
     <div className="header">
         <div className="left-header">
             <div >
-                <Bars3Icon className="icon"/>
+                <Bars3Icon className="icon" onClick={()=> props.setOpenSidebar((pre)=> !pre)}/>
             </div>
             <div className="logo">
                 Exly
