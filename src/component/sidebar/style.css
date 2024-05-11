@@ -1,0 +1,40 @@
+
+.sidebar{
+    width: 250px;
+    height: calc( 100vh - 60px);
+    border-right: 1px solid rgb(123, 123, 123);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    
+}
+.sidebar-up{
+    padding: 30px 10px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sidebar-items{
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-items-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+    width: 28px;
+    color: rgb(67, 67, 67);
+}
+.down-arrow{
+    color: grey;
+}

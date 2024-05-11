@@ -1,0 +1,46 @@
+
+
+.home{
+    padding: 15px;
+}
+
+.transaction-menu{
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid rgb(187, 186, 186);
+}
+.transaction-menu-btn{
+    margin-top: 5px;
+    padding: 15px 0;
+    color: grey;
+}
+.active-menu-btn{
+    color: blueviolet;
+    border-bottom: 1px solid rgb(156, 53, 197);
+}
+
+
+.search{
+    display: flex;
+}
+.search-cont{
+    border: 1px solid rgb(179, 177, 177);
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+.search-input{
+    border: 0;
+    width: 200px;
+    display: inline-block;
+    outline: none;
+}
+.search-select{
+    border: 0;
+   border-left: 1px solid rgb(175, 173, 173);
+   background-color: rgba(240, 255, 255, 0);
+   color: grey;
+   padding-left: 10px;
+}
+
+
