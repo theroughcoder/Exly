@@ -6,6 +6,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { userData } from "../../data/users"
 import { Button } from "@mui/material";
 import AddBookingForm from "../../component/addBookingForm";
+import CustomerTable from "../../component/customerTable"
 
 const Home = (props) => {
 
@@ -21,18 +22,18 @@ const Home = (props) => {
     setFilterUser(user);
   }, [user])
 
-  function addNewCustomer(obj){
+  function addNewCustomer(obj) {
     let list = [...user];
     list.unshift(obj);
     setUser(list);
   }
 
-  useEffect(()=> {
-    if(search == ""){
+  useEffect(() => {
+    if (search == "") {
       setFilterUser(user);
-    }else{
+    } else {
 
-      let list = user.filter((e)=> search.toLowerCase() == e[searchBy].slice(0, search.length).toLowerCase() )
+      let list = user.filter((e) => search.toLowerCase() == e[searchBy].slice(0, search.length).toLowerCase())
       setFilterUser(list)
     }
   }, [search, searchBy])
@@ -41,7 +42,7 @@ const Home = (props) => {
     <div className="home">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "600" }}>Manage Transactions</div>
-        <Button onClick={()=> setOpenAddForm(true)} variant="contained" style={{ background: "#6b1091", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span><ChevronRightIcon style={{ width: "25px" }} /> </Button>
+        <Button onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6b1091", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span><ChevronRightIcon style={{ width: "25px" }} /> </Button>
 
       </div>
       <div className="transaction-menu">
@@ -50,8 +51,8 @@ const Home = (props) => {
       </div>
       <div className="search">
         <div className="search-cont">
-          <input value={search} onChange={(e)=> setSearch(e.target.value)} className="search-input" placeholder="Select search by..." />
-          <select className="search-select" name="cars" id="cars" defaultValue={searchBy} onChange={(e)=> setSearchBy(e.target.value)}>
+          <input value={search} onChange={(e) => setSearch(e.target.value)} className="search-input" placeholder="Select search by..." />
+          <select className="search-select" name="cars" id="cars" defaultValue={searchBy} onChange={(e) => setSearchBy(e.target.value)}>
             <option value="" disabled selected>Select By</option>
             <option value="name">Name</option>
             <option value="email">Email</option>
@@ -60,8 +61,10 @@ const Home = (props) => {
         </div>
       </div>
 
-      <div style={{overflow: "auto"}} >
-      {openAddForm && <AddBookingForm setOpenAddForm={setOpenAddForm} addNewCustomer={addNewCustomer}/>}
+      <div style={{ overflow: "auto" }} >
+        <CustomerTable user={filterUser} />
+
+        {openAddForm && <AddBookingForm setOpenAddForm={setOpenAddForm} addNewCustomer={addNewCustomer} />}
 
       </div>
 
