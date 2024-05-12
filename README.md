@@ -15,6 +15,25 @@ Exly is an assignment project that is designed for recording customers' informat
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
+# Documentation
+## Features
+* Search functionality
+* pagination.
+* Validation
+* Error handling
+* Add Customer by add form
+* Responsive UI
+* User-friendly UI
+
+## Code Usage
+* Step 1: Open Exly web app https://exly-pi.vercel.app/
+* step 2: Click "Add Customer" button which will open a form for adding the customer to "customer table".
+* step 3: Resolve the validation error if occurred.
+* step 4: Click "submit" button.
+  
+
+### 
+
 ## Screenshots
 ![Alt text](https://github.com/theroughcoder/Exly/blob/main/screenshots/Screenshot%20(98).png "Optional Title")
 ![Alt text](https://github.com/theroughcoder/Exly/blob/main/screenshots/Screenshot%20(99).png "Optional Title")
