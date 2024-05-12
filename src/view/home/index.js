@@ -26,6 +26,7 @@ const Home = (props) => {
     let list = [...user];
     list.unshift(obj);
     setUser(list);
+    setSearch("");
   }
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const Home = (props) => {
     <div className="home">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ fontSize: "18px", fontWeight: "600" }}>Manage Transactions</div>
-        <Button className="customer-add-btn" onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6e13c3", display: "flex", gap: "2px", fontSize: "18px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span> </Button>
+        <Button className="customer-add-btn" onClick={() => setOpenAddForm(true)} variant="contained" style={{ background: "#6e13c3", display: "flex", gap: "2px", fontSize: "14px", fontWeight: "600" }}><QueueListIcon style={{ width: "20px" }} /> <span style={{ display: "block", transform: "translateY(-1px)" }}> Add Customer</span> </Button>
 
       </div>
       <div className="transaction-menu">
@@ -62,7 +63,7 @@ const Home = (props) => {
       </div>
 
       <div  >
-        <CustomerTable user={filterUser} />
+        <CustomerTable user={filterUser} search={search} addUser={user}/>
 
         {openAddForm && <AddBookingForm setOpenAddForm={setOpenAddForm} addNewCustomer={addNewCustomer} />}
 

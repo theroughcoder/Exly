@@ -1,11 +1,17 @@
 import { ArrowPathIcon } from "@heroicons/react/16/solid";
 import "./style.css"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Pagination from "../pagination";
+
+const avatarArr = ["#7af5ab", "#c58ade", "#de8a98", "#8aded1", "#ded58a", "#8aa8de" ]
 
 const CustomerTable = (props) => {
 
     const [pagination , setPagination] = useState(1);
+
+    useEffect(()=> {
+        setPagination(1);
+    }, [props.addUser, props.search])
     return (
         <>
             <div style={{ overflow: "auto" }}>
@@ -28,9 +34,9 @@ const CustomerTable = (props) => {
                                 <div style={{
                                     display: "inline-block", margin: "0 10px",
                                     width: "30px", height: "30px", borderRadius: "20px",
-                                    background: "#7af5ab", color: "white", fontSize: "20px", textAlign: "center"
+                                    background: avatarArr[(Math.floor( (e.name.slice(0, 1).toUpperCase().charCodeAt() - 64) % 4))], color: "white", fontSize: "20px", textAlign: "center"
                                 }}
-                                    className="avtar">{e.name.slice(0, 1)}</div>
+                                    className="avatar">{e.name.slice(0, 1).toUpperCase() }</div>
                                 {e.name}
                             </td>
                             <td>{e.phone}<img style={{ width: "16px" }} src="./whatapp.jpg" /> </td>
@@ -49,7 +55,7 @@ const CustomerTable = (props) => {
                     </tbody>
                 </table >
             </div>
-            <Pagination length={props.user.length} pagination={pagination} setPagination={setPagination}/>
+            <Pagination length={props.user.length} pagination={pagination} setPagination={setPagination} />
         </>
     )
 };

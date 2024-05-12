@@ -1,13 +1,22 @@
 
 export const userData = [
     {
-        name : "Urooj",
+        name : "Ashu",
         phone: "+91 9538 495 843",
-        email: "urooj@gmail.com",
+        email: "Noor@gmail.com",
         owner: "NA",
         offeringName: "Demo Class in Hindi",
         payout: "Proceed",
     },
+    {
+        name : "Bablu",
+        phone: "+91 9538 495 843",
+        email: "bhalu@gmail.com",
+        owner: "NA",
+        offeringName: "Demo Class in Hindi",
+        payout: "Proceed",
+    },
+   
     {
         name : "Saniya",
         phone: "+91 9538 495 843",
